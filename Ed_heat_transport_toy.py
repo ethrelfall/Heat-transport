@@ -41,5 +41,7 @@ T = Function(V)
 
 solve( a==L, T, bcs=[bcLL, bcR])
 
-# QOIs can be T in centre of domain and heat flux through boundaries 18, 19, 20 (= heat flux from lhs square to rhs one)
+# QOIs can be T in centre of domain and distribution of heat flux out (total is of course equal to heat flux in through LHS)
+# T in centre basically given by T on left, T on right, and balance between plasma and metal heat conductivities
+# cf. 1D model T_mid = T_L (k_L/(k_L+k_R)) + T_R (k_R/(k_L+k_R)) so if k_L >> k_R T_mid -> T_L
 File("Ed_heat_transport_toy.pvd").write(T)  
