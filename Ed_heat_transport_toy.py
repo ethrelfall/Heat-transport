@@ -5,10 +5,8 @@ from firedrake import *
 # right-hand-side is nominally reactor wall, cooled to const temperatures
 
 # this needs:
-# 1) left-hand-side needs making anisotropic
-# 2) right-hand-side needs to be different material
-# 3) turning into two coupled problems (right now is tightly-coupled)
-# 4) add radiation i.e. black body \sigma T**4 (Stefan's Law)
+# 1) turning into two coupled problems (right now is tightly-coupled)
+# 2) add radiation i.e. black body \sigma T**4 (Stefan's Law)
 
 mesh=Mesh("bi_unit_square.msh")
 
