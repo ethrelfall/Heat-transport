@@ -2,11 +2,11 @@ from firedrake import *
 
 # proxy for "coupled" problem in conductive heat transport
 # left-hand-side unit square is nominally beam region
-# right-hand-side is nominally reactor wall, cooled to const temperatures
+# right-hand-side is nominally reactor wall, cooled to const temperatures at external boundaries
 
 # this needs:
-# 1) left-hand-side needs making anisotropic
-# 2) right-hand-side needs to be different material
+# 1) left-hand-side making anisotropic
+# 2) right-hand-side to be different material
 # 3) turning into two coupled problems (right now is tightly-coupled)
 # 4) add radiation i.e. black body \sigma T**4 (Stefan's Law)
 
