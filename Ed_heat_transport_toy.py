@@ -24,7 +24,7 @@ bf = 1+conditional(And(ge(y, -0.25), le(y, 0.25)), exp(16-1/(0.25*0.25-y**2)), 0
 bcLL = DirichletBC(V, bf, 16)  # source on LHS edge
 bcR  = DirichletBC(V, 0.0, (18,19,20)) # const temperature
 
-theta = 0.0*pi/180 # nonzero angle does not work nicely with BC on RHS
+theta = 0.0*pi/180 # nonzero angle may cause artifacts for some BC choices
 bhat=as_vector([cos(theta),sin(theta)])
 
 k_par = conditional(le(x,0.5), 50.0, 1.0)
