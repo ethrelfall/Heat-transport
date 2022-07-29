@@ -5,6 +5,10 @@ Models of heat transport
 
 The diffusivity tensor is anisotropic on the LHS (with transport only permitted in the horizontal direction, or at 5 degrees to that axis, in the examples illustrated).  Observe, however, how contact with the RHS region "sucks" heat out of the beam, reducing the temperature at the strike point compared to the LHS wall temperature.
 
-![heat_transport_toy_outout](png/Ed_heat_transport_toy_output.png "Output of heat transport toy for anisotropic (50,0) on LHS and isotropic (1,1) on RHS.")
+![heat_transport_toy_output](png/Ed_heat_transport_toy_output.png "Output of heat transport toy for anisotropic (50,0) on LHS and isotropic (1,1) on RHS.")
 
-![heat_transport_toy_outout_5deg](png/Ed_heat_transport_toy_output_5deg.png "Output of heat transport toy as above, with anisotropic diffusion axis aligned at 5 deg to the horizontal (note the LHS temperature profile has been adjusted to a baseline of zero to avoid boundary artifacts)).")
+![heat_transport_toy_output_5deg](png/Ed_heat_transport_toy_output_5deg.png "Output of heat transport toy as above, with anisotropic diffusion axis aligned at 5 deg to the horizontal (note the LHS temperature profile has been adjusted to a baseline of zero to avoid boundary artifacts)).")
+
+Some of the basic physics can be shown in a 1D example (Neumann BCs top and bottom) with unit temperature on the left-hand-side boundary and zero on the right.  Then the temperature varies piecewise linearly and the midpoint temperature is k_left / (k_left+k_right) i.e. the fraction of temperature dropped across the plasma depends on the ratio between its conductivity to that of the metal, and the more conductive the plasma the less temperature is dropped across it. Here k_left is 5 times k_right and so the strike-point temperature is 5/6 = 0.833.
+
+![heat_transport_toy_output_1d](png/Ed_heat_transport_toy_output_1d.png "Output of heat transport toy for 1D scenario with k=5 on the left half and 1 on the right.")
